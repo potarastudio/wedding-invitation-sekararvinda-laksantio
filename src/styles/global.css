@@ -1,0 +1,111 @@
+/* ============================================================
+   Javanese Wedding Theme — Maroon Dominant + Cream Paper
+   ============================================================ */
+:root {
+  /* Palette */
+  --c-maroon:        #5a1e1e;  /* primary text & accents */
+  --c-maroon-dark:   #3e1414;  /* deeper borders, shadows */
+  --c-maroon-bright: #8a2a2a;  /* hover, highlights */
+  --c-paper:         #fbf3e4;  /* lightest cream (cards) */
+  --c-cream:         #f3e6cf;  /* base background */
+  --c-cream-dim:     #e8d6b6;  /* edges, deeper paper */
+  --c-gold:          #c79a4c;  /* metallic accent */
+  --c-gold-soft:     #d9b878;  /* subtle gold rule */
+  --c-rose:          #a83232;  /* rose tint */
+
+  /* Fonts */
+  --font-script:  'Great Vibes', cursive;
+  --font-serif:   'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Cormorant Garamond', Georgia, serif;
+  --font-jawa:    'Noto Serif Javanese', serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--c-cream);
+  color: var(--c-maroon);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%, #fbf3e4 0%, #f3e6cf 55%, #e8d6b6 100%);
+}
+
+#root { position: relative; width: 100%; min-height: 100vh; }
+
+a { color: var(--c-maroon-bright); text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ---------- Reusable utilities ---------- */
+.container { width: min(560px, 92vw); margin: 0 auto; }
+
+.section {
+  position: relative;
+  padding: clamp(80px, 14vh, 140px) 0;
+  z-index: 2;
+}
+
+.section-eyebrow {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--c-maroon);
+  text-align: center;
+  opacity: 0.8;
+}
+
+.section-title {
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: clamp(2.6rem, 8vw, 4rem);
+  color: var(--c-maroon);
+  text-align: center;
+  line-height: 1.1;
+  margin: 0.2em 0 0.4em;
+}
+
+.section-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-align: center;
+  color: var(--c-maroon);
+  opacity: 0.75;
+  font-size: 1rem;
+  margin-bottom: 2em;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px auto;
+  color: var(--c-gold);
+}
+.divider::before,
+.divider::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: clamp(40px, 16vw, 120px);
+  background: linear-gradient(90deg, transparent, var(--c-gold), transparent);
+}
+
+/* Reveal initial state (for GSAP) */
+.reveal   { opacity: 0; transform: translateY(30px); }
+.reveal-x { opacity: 0; transform: translateX(-30px); }
+
+@media (max-width: 640px) {
+  .section { padding: 70px 0; }
+}

@@ -1,0 +1,369 @@
+Tentu, mari kita bedah secara mendalam video referensi "3D Adat Jawa 03" ini. Dari kacamata engineering UI/UX berbasis React dan animasi GSAP, undangan ini menggunakan konsep continuous programmatic scrolling/scroll-driven transformation.
+
+Transisinya berganti secara mulus melalui elemen latar belakang statis yang ditumpuk (layered background), sementara konten teks dan card bergerak secara vertikal.
+
+Berikut adalah breakdown lengkap section demi section setelah cover dibuka oleh gunungan:
+
+1. Breakdown Lengkap Section Demi Section
+Section 1: Ayat Suci / Kutipan Pernikahan
+Urutan: Section 1 (Pertama setelah Cover/Pembuka)
+
+Konten Persis:
+
+Teks kutipan: "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."
+
+Label: Q.S Ar-Rum : 21
+
+Layout Struktur: 1 Kolom, center-aligned. Foto prewedding diletakkan di atas teks kutipan, terbungkus dalam frame persegi panjang bersudut melengkung (rounded rectangle).
+
+Elemen Visual Khas: Foto prewedding pasangan (pakaian adat Jawa maroon), border tipis berwarna putih pada frame foto.
+
+Animasi/Transisi Masuk (GSAP): Ketika gunungan membuka ke samping dan menghilang dari viewport, aset Joglo mengecil (scale down) ke posisi bawah, sementara kluster foto dan teks kutipan muncul dari bawah dengan efek fade-in dan bergeser ke atas (translateY).
+
+Interaksi User: Tidak ada (Murni impresi visual).
+
+Background/Dekorasi: Pemandangan watercolor sawah, pohon, gunung, langit abu-abu dengan burung berterbangan, dan rumah Joglo di area bawah.
+
+Section 2: Mempelai (Pambuko / Sarimbit)
+Urutan: Section 2
+
+Konten Persis:
+
+"Assalamualaikum Warahmatullahi Wabarakatuh"
+
+"Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan putra-putri kami:"
+
+Nama Mempelai Pria: "M. Diky Alhafizh"
+
+Keterangan: "Putra Pertama Dari Bapak Lorem & Ibu Lorema"
+
+Username IG: "@zehan_invitation"
+
+Simbol pemisah: "&" (font script besar)
+
+Nama Mempelai Wanita: "Tri Wahyuni"
+
+Keterangan: "Putri Pertama Dari Bapak Lorem & Ibu Lorema"
+
+Username IG: "@zehan_invitation"
+
+Layout Struktur: 1 Kolom. Foto masing-masing mempelai dibingkai dalam bentuk oval/elips vertikal secara bergantian (Pria di atas, Wanita di bawah).
+
+Elemen Visual Khas: Bingkai oval ber-border emas/putih tipis, icon Instagram kecil di samping username, ornamen gunungan wayang berukuran sedang sebagai pembatas tengah (di bawah nama pria).
+
+Animasi/Transisi Masuk (GSAP): Scroll-triggered progressive fade-in. Saat user melakukan scroll, teks salam muncul terlebih dahulu, diikuti foto elips pria yang bergeser halus dari bawah ke atas, disusul teks nama, ornamen gunungan, lalu foto elips wanita dengan sekuens yang sama.
+
+Interaksi User: Tombol/tautan pada username Instagram (bisa diklik menuju profil/URL eksternal).
+
+Background/Dekorasi: Background transisi dari warna cream watercolor berubah menjadi warna solid Maroon Pekat (#5a1e1e) secara penuh. Di sisi kanan-kiri terdapat dekorasi bunga mawar merah dan putih konstan.
+
+Section 3: Hitung Mundur & Acara (Pasrah Tinampi / Tarbukan)
+Urutan: Section 3
+
+Konten Persis:
+
+Teks: "Counting The Days"
+
+Angka digital & Label: [77] Hari, [10] Jam, [12] Menit, [27] Detik
+
+Tombol: "SAVE ON THE CALENDAR"
+
+Sub-Section 1: Akad Nikah
+
+Hari/Tanggal: "KAMIS, 21 MEI 2026"
+
+Waktu: "08:00 WIB - Selesai"
+
+Lokasi: "Kediaman Mempelai Wanita"
+
+Alamat: Teks placeholder Lorem Ipsum...
+
+Tombol: "OPEN MAPS"
+
+Sub-Section 2: Resepsi
+
+Hari/Tanggal: "RABU, 20 MEI 2026"
+
+Waktu: "13:00 WIB - Selesai"
+
+Lokasi & Alamat: Sama seperti di atas.
+
+Sub-Section 3: Unduh Mantu
+
+Hari/Tanggal: "RABU, 20 MEI 2026"
+
+Waktu: "08:00 WIB - Selesai"
+
+Lokasi: "Kediaman Mempelai Pria" + Alamat placeholder.
+
+Layout Struktur: Card Stack / Vertical Timeline List. Setiap detail acara (Akad, Resepsi, Unduh Mantu) dibungkus dalam sebuah kontainer/card berbentuk kubah masjid/pintu gerbang kerajaan (arch frame).
+
+Elemen Visual Khas: Di bagian atas countdown terdapat ornamen Gunungan Wayang putih/perak simetris yang besar. Setiap card acara memiliki border bermotif ukiran emas/putih yang melengkung di bagian atas (top arch). Icon penanda lokasi (pin maps) berwarna merah/emas.
+
+Animasi/Transisi Masuk (GSAP): Komponen countdown muncul dengan efek staggered fade-in (angka muncul berurutan). Ketika di-scroll lebih lanjut, Arch card acara bergeser naik secara bergantian dari bawah layar (slide up dengan easing lembut), menciptakan efek tumpukan kartu yang elegan.
+
+Interaksi User:
+
+Tombol "SAVE ON THE CALENDAR" (Integrasi ke Google Calendar/iCal).
+
+Tombol "OPEN MAPS" di setiap sub-section acara (Membuka aplikasi Google Maps/Waze).
+
+Background/Dekorasi: Tetap berada di atas latar belakang maroon pekat dengan siluet watercolor Joglo samar di bagian bawah area countdown.
+
+Section 4: Live Streaming (Nonton Bareng)
+Urutan: Section 4
+
+Konten Persis:
+
+Judul: "Live Streaming"
+
+Teks deskripsi: "Kami mengundang Bapak/Ibu/Saudara/i untuk menyaksikan Pernikahan kami secara Virtual yang disiarkan langsung melalui Sosial Media di bawah ini"
+
+Tombol: "KLIK DISINI" dengan icon kamera video.
+
+Layout Struktur: 1 Kolom sederhana, diletakkan di dalam bingkai persegi panjang dengan sudut melengkung tipis.
+
+Elemen Visual Khas: Icon kamera video klasik di dalam tombol utama. Pembatas atas dan bawah menggunakan garis tipis horizontal bermotif gelombang/floral emas.
+
+Animasi/Transisi Masuk (GSAP): Muncul secara linear menyambung dari section acara, menggunakan efek fade-in standar yang dipicu oleh posisi scroll (ScrollTrigger).
+
+Interaksi User: Tombol "KLIK DISINI" yang mengarah ke link YouTube Live atau Zoom.
+
+Background/Dekorasi: Latar belakang maroon pekat konstan.
+
+Section 5: Galeri Foto (Sinuwun)
+Urutan: Section 5
+
+Konten Persis:
+
+Judul: "Our Gallery"
+
+Sub-teks: "Constantly, consistently, continually, You."
+
+Kumpulan foto prewedding (tanpa teks/label tambahan).
+
+Layout Struktur: Asymmetrical Grid Layout (Susunan Grid Mosaik). Struktur grid terdiri dari:
+
+Baris 1: 2 foto horizontal sejajar.
+
+Baris 2: 1 foto potret panjang (kiri) + 2 foto persegi ditumpuk vertikal (kanan).
+
+Baris 3: 2 foto horizontal sejajar, dan seterusnya.
+
+Elemen Visual Khas: Garis pembatas antar foto (grid gap) berwarna putih bersih yang tipis, memberikan kesan rapi di tengah latar warna gelap.
+
+Animasi/Transisi Masuk (GSAP): Efek parallax block scrolling. Saat di-scroll, seluruh blok grid galeri naik bersamaan, namun dengan kecepatan translasi yang sedikit berbeda dari elemen teks judulnya (subtle parallax).
+
+Interaksi User: Klik pada foto untuk memicu modal lightbox zoom (opsional, lumrah pada struktur UI ini).
+
+Background/Dekorasi: Transisi halus dari latar maroon kembali menjadi latar Cream Paper / Watercolor cerah saat grid galeri mulai habis di-scroll.
+
+Section 6: Cerita Cinta (Aluran Tresno / Story)
+Urutan: Section 6
+
+Konten Persis:
+
+Judul: "Love Story"
+
+Sub-teks: "Every love story is beautiful, but ours is my favorite."
+
+Milestone 1: Year "2023", Judul "Awal Bertemu", Deskripsi Lorem Ipsum...
+
+Milestone 2: Year "2025", Judul "Lamaran", Deskripsi Lorem Ipsum...
+
+Milestone 3: Year "2026", Judul "Menikah", Deskripsi Lorem Ipsum...
+
+Layout Struktur: Vertical Timeline. Garis vertikal lurus diletakkan di sisi kiri layar. Setiap titik milestone ditandai dengan lingkaran icon. Konten teks dan foto berada di sebelah kanan garis tersebut (Layout 1.5 kolom).
+
+Elemen Visual Khas: Garis timeline berwarna maroon dengan pin lingkaran kecil berisi icon siluet (misal: icon cincin untuk lamaran, icon orang berpasangan untuk awal bertemu). Foto horizontal diselipkan di bawah teks deskripsi masing-masing milestone.
+
+Animasi/Transisi Masuk (GSAP): Line-drawing animation dikombinasikan dengan staggered content reveal. Saat user men-scroll ke bawah, garis vertikal akan mendatar/memanjang ke bawah seolah sedang digambar, lalu milestone demi milestone akan muncul memudar dari kanan (fade-in from right).
+
+Interaksi User: Menggulir layar (scrolling).
+
+Background/Dekorasi: Background Cream dengan tekstur paper/watercolor yang bersih agar teks story mudah dibaca.
+
+Section 7: Kado Digital (Kromo / Wedding Gift)
+Urutan: Section 7
+
+Konten Persis:
+
+Judul: "WEDDING GIFT"
+
+Teks pengantar: "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless."
+
+Komponen Alamat Pengiriman:
+
+Icon Kado, Label: "Gift", Nama Penerima: "Diky & Yuni", Alamat Lengkap (Lorem Ipsum).
+
+Tombol: "Salin Alamat"
+
+Komponen Rekening Bank 1 (Digital/QR):
+
+Logo Bank, Nomor Rekening: "0123456789", Atas Nama: "M. Diky Alhafizh".
+
+Tombol: "Salin Rekening"
+
+Komponen Rekening Bank 2 (BNI):
+
+Logo BNI, Nomor Rekening: "0123456789", Atas Nama: "M. Diky Alhafizh".
+
+Tombol: "Salin Rekening"
+
+Komponen Rekening Bank 3 (Hana Bank):
+
+Logo Hana Bank, Detail sama, Atas Nama: "Tri Wahyuni".
+
+Layout Struktur: Vertical Card List. Setiap informasi rekening/alamat diletakkan di dalam card block terpisah dengan perataan teks kiri (left-aligned).
+
+Elemen Visual Khas: Setiap kontainer rekening memiliki border maroon tipis dengan sudut tumpul. Tombol "Salin" memiliki icon dokumen ganda (copy icon). Ketika tombol ditekan, muncul pop-up modal/overlay konfirmasi berwarna hijau dengan teks "Alamat Disalin! / Rekening Disalin!" serta tombol "Konfirmasi Pengiriman".
+
+Animasi/Transisi Masuk (GSAP): Transisi warna background kembali memekat menjadi Maroon Solid. Card-card gift ini muncul satu per satu dari arah bawah mencuat ke atas dengan efek spring/bounce mikro yang halus.
+
+Interaksi User:
+
+Tombol "Salin Alamat" dan "Salin Rekening" (Memicu fungsi navigator.clipboard.writeText).
+
+Tombol "Konfirmasi Pengiriman" pada pop-up (Mengarahkan langsung ke WhatsApp konfirmasi).
+
+Background/Dekorasi: Latar belakang maroon dengan hiasan bunga mawar merah-putih subur di bagian bawah viewport.
+
+Section 8: Doa & Ucapan (Ulem-Ulem / RSVP & Wishes)
+Urutan: Section 8
+
+Konten Persis:
+
+Judul: "BEST WISHES"
+
+Sub-teks: "Sampaikan doa dan ucapan terbaik Anda"
+
+Indikator: "0 Ucapan"
+
+Form Input: Field "Nama Tamu", Dropdown "Konfirmasi Kehadiran", Textarea "Tulis ucapan".
+
+Tombol: "+ Sticker" dan Tombol "Kirim".
+
+Layout Struktur: Form Layout 1 Kolom. Seluruh field input diletakkan berurutan secara vertikal dengan lebar penuh menyesuaikan layar (full width mobile).
+
+Elemen Visual Khas: Field input memiliki warna dasar putih bersih dengan border tipis, memberikan kontras yang sangat tinggi di atas warna maroon. Tombol "Kirim" menggunakan latar belakang solid emas atau putih dengan teks kontras.
+
+Animasi/Transisi Masuk (GSAP): Komponen form bergeser naik secara blok (fade in up). Area daftar ucapan yang dikirimkan di bawahnya akan meluncur memudar setelah form aktif di layar.
+
+Interaksi User:
+
+Mengisi teks form.
+
+Memilih opsi kehadiran (Hadir/Tidak Hadir).
+
+Menekan tombol "Kirim" untuk melakukan submit data ucapan ke database/API.
+
+Background/Dekorasi: Latar belakang maroon pekat konstan.
+
+Section 9: Dresscode & Turut Mengundang
+Urutan: Section 9
+
+Konten Persis:
+
+Judul: "DRESS CODE"
+
+Teks: "Kami dengan hormat menganjurkan tamu kami untuk mengenakan warna-warna ini untuk hari istimewa kami"
+
+Palet warna lingkaran indikator.
+
+Judul: "TURUT MENGUNDANG"
+
+Teks: "Dengan segala hormat, kami juga mengundang Bapak/Ibu/Saudara/i yang tersebut di bawah ini untuk berkenan hadir dan memberikan doa restu pada acara tersebut:"
+
+Daftar nama: Keluarga Mempelai Wanita (1 s.d 5), Keluarga Mempelai Pria (1 s.d 5).
+
+Layout Struktur: 1 Kolom. Lingkaran warna dresscode disusun secara horizontal (flex row). Daftar keluarga dikelompokkan vertikal.
+
+Elemen Visual Khas: 4 buah lingkaran solid contoh warna dresscode (maroon, emas tua, cokelat tanah, emas muda). Daftar nama keluarga menggunakan struktur list angka (numbered list).
+
+Animasi/Transisi Masuk (GSAP): Muncul berurutan secara vertikal menggunakan interpolasi scroll standard.
+
+Interaksi User: Menggulir layar.
+
+Background/Dekorasi: Latar belakang maroon pekat.
+
+Section 10: Penutup (Wasanasada / Tutup)
+Urutan: Section 10 (Terakhir)
+
+Konten Persis:
+
+Teks Penutup: "Menjadi sebuah kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dalam hari bahagia ini. Terima kasih atas segala doa, ucapan dan perhatian yang diberikan."
+
+Nama Pasangan: "Diky & Yuni"
+
+Layout Struktur: 1 Kolom, center-aligned. Frame foto penutup berbentuk oval vertikal diletakkan di bagian atas teks penutup.
+
+Elemen Visual Khas: Foto romantis penutup terbingkai garis putih halus. Nama pengantin ditulis dengan font Great Vibes berukuran besar sebagai penanda akhir dari undangan digital.
+
+Animasi/Transisi Masuk (GSAP): Elemen bertransisi masuk dengan kebalikan dari pembukaan cover: Warna background maroon perlahan memudar (fade out) kembali ke warna Cream Paper. Frame foto oval mengecil/membesar lembut ke posisi diamnya (scale animation).
+
+Interaksi User: Tombol play/pause audio latar musik (biasanya diletakkan konstan sebagai floating action button di pojok layar sejak cover terbuka).
+
+Background/Dekorasi: Ornamen lengkungan kubah putih di bagian atas, bunga mawar merah di sekeliling bawah, dan siluet pemandangan Jawa klasik yang damai sebagai latar belakang statis akhir.
+
+2. Analisis Tambahan Sesuai Kebutuhan Anda
+A. Urutan Section Paling Natural (Alur Cerita / Storytelling)
+Alur dalam video ini sudah sangat baik karena menerapkan prinsip "Kenal - Datang - Restui":
+
+Pambuko (Kutipan & Salam): Sebagai transisi emosional setelah cover dibuka. Jangan langsung menyodorkan data teknis.
+
+Mempelai (Sarimbit): Memperkenalkan subjek utama (siapa yang menikah).
+
+Acara (Wektu & Panggonan): Memberikan informasi logistik krusial (kapan dan di mana) tepat setelah tamu tahu siapa yang mengundang.
+
+Galeri & Story (Aluran Tresno): Membangun kedekatan emosional (melihat perjalanan cinta pengantin) setelah tahu info dasar acara.
+
+Kado & RSVP (Kromo & Gati): Bagian aksi. Tamu yang berniat datang atau mengirim hadiah difasilitasi di area ini (mendekati akhir halaman).
+
+Wasanasada (Penutup): Ucapan terima kasih formal penutup halaman.
+
+B. Salinan/Copy Teks Template Jawa Klasik Eleman
+Berikut opsi teks transisi atau judul section bermutasi Jawa untuk disematkan di komponen React Anda:
+
+Untuk Section 1 (Kutipan):
+
+"Miwiti niku kanthi rasaning tresno, nggayuh mulyaning urip bebrayan." (Memulai dengan rasa cinta, menggapai mulianya hidup berumah tangga).
+
+Untuk Section 2 (Mempelai):
+
+"Serat Palakrama / Pambuko"
+"Kanthi nyuwun donga pangestu dumateng Gusti Ingkang Maha Kuwasan, wonten mriki kawula badhe ngabari dumateng panjenengan sedaya bilih putra-putri kawula badhe nindakaken dumateng rukun islam inggih punika palakrama (pernikahan):"
+
+Untuk Section 3 (Detail Acara):
+
+"Adicara Palakrama"
+
+Ganti label Akad Nikah → "Ijab Qabul / Pasrah Tinampi"
+
+Ganti label Resepsi → "Pahargan Dhahar Klimah / Panggih"
+
+Untuk Section 10 (Penutup):
+
+"Wasanasada"
+"Matur nuwun sanget dumateng kawigatosan lan donga pangestu ingkang sampun panjenengan paringaken. Singgih, Gusti berkahi."
+
+C. Daftar Aset Visual Baru yang Harus Digenerate
+Untuk mencapai visualisasi persis seperti di video, Anda memerlukan beberapa aset SVG/PNG transparan (high-res) berikut:
+
+Arch Frame Border (Ukiran Lengkung Keraton): Desain border atas melengkung berornamen ukiran emas/putih untuk membingkai card Akad dan Resepsi.
+
+Oval Filigree Frame: Bingkai berbentuk oval dengan aksen ukiran bunga tipis di tepinya untuk foto profil masing-masing mempelai di Section 2.
+
+Line Timeline Knot (Simpul Corak): Aset lingkaran kecil berbentuk motif bunga melati atau batik parang kecil untuk titik penanda (node) di sepanjang garis Love Story.
+
+Floating Bird Silhouettes (Siluet Burung): Vektor burung kecil berwarna hitam/abu-abu tua dalam format gerak (bisa berupa susunan sprite atau SVG terpisah) untuk dianimasikan terbang menggunakan GSAP di atas Joglo pada section awal.
+
+Garis Divider Floral Gelombang: Garis pembatas horizontal horizontal dengan lekukan tanaman menjalar (floral) untuk pemisah konten pendek seperti di section Live Streaming.
+
+D. Saran Palette Tambahan Selain Maroon, Emas, dan Cream
+Jika Anda perhatikan di video, mereka menggunakan beberapa warna transisi dan aksen halus agar desain tidak monoton kaku:
+
+Sage Green Semburat (#8f9779): Terlihat pada dedaunan watercolor di background sawah/pohon. Ini sangat bagus untuk melembutkan transisi dari warna cream ke maroon pekat.
+
+Dusty Rose / Mawar Redup (#a36a6a): Untuk warna bayangan kelopak bunga mawar merah di bagian pinggir agar visual bunga 3D-nya memiliki kedalaman dimensi (depth of field).
+
+Charcoal Grey / Abu-Abu Arang (#333333): Digunakan untuk teks isi (body text) di atas background cream. Hindari warna hitam pekat (#000000) murni agar nuwun klasiknya tidak rusak oleh kontras modern yang terlalu tajam. Gunakan warna ini untuk font Lorem Ipsum Anda.

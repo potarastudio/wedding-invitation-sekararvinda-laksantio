@@ -1,0 +1,496 @@
+Saya sudah menganalisis video referensi yang Anda upload. Walaupun tidak semua teks terbaca sempurna karena resolusi video preview, struktur dan urutan section-nya terlihat cukup jelas.
+
+Gambaran Umum Flow
+
+Video ini menggunakan pola:
+
+Cover
+Pembuka / Hero Mempelai
+Countdown
+Profil Mempelai
+Detail Acara
+Lokasi
+Galeri
+Love Story
+Wedding Gift
+RSVP & Wishes
+Ucapan Terima Kasih / Keluarga
+Penutup
+
+Flow tersebut terasa natural karena mengikuti perjalanan tamu:
+
+dibuka → mengenal pasangan → tahu kapan acara → tahu lokasi → melihat foto → membaca cerita → memberi hadiah → mengirim ucapan → penutup
+
+SECTION 1 — Hero Mempelai
+Urutan
+
+Section pertama setelah cover dan animasi gunungan.
+
+Konten yang terlihat
+Foto mempelai pria
+Nama mempelai
+Nama orang tua
+Tombol undangan
+
+Terlihat contoh:
+
+M. Diky Alhafizh
+Putra Pertama Dari
+Bapak Lorem & Ibu Lorem
+Layout
+Single column
+Card tinggi berbentuk rounded
+Foto di bagian atas
+Nama dan biodata di bawah foto
+Visual
+Background maroon transparan
+Ornamen motif Jawa
+Gunungan watermark
+Animasi
+Card muncul dari bawah
+Fade in
+Sedikit zoom
+Interaksi
+Tombol buka undangan
+Background
+Mawar merah maroon
+Joglo samar
+Pattern batik abu-cream
+SECTION 2 — Countdown
+Urutan
+
+Section kedua
+
+Konten
+Gunungan besar di tengah
+"Counting The Days"
+Hari
+Jam
+Menit
+Detik
+
+Tombol:
+
+Save On The Calendar
+Layout
+
+Single column
+
+Gunungan
+
+Counting The Days
+
+[Hari] [Jam]
+[Menit] [Detik]
+
+Button
+Visual
+Gunungan putih
+Background maroon
+Animasi
+Gunungan scale-up
+Counter fade
+Interaksi
+Add to Calendar
+Background
+Maroon full section
+Motif floral tipis
+SECTION 3 — Profil Mempelai Lengkap
+Urutan
+
+Setelah countdown
+
+Konten
+
+Mempelai pria:
+
+Foto
+Nama
+Orang tua
+
+Mempelai wanita:
+
+Foto
+Nama
+Orang tua
+Layout
+
+Stack card
+
+Card Pria
+
+&
+
+Card Wanita
+Visual
+Frame lengkung
+Motif Jawa
+Animasi
+Card slide up
+SECTION 4 — Detail Acara
+Urutan
+
+Setelah profil mempelai
+
+Konten
+
+Terlihat:
+
+Akad
+Hari
+Tanggal
+Jam
+Unduh Mantu
+Hari
+Tanggal
+Jam
+Layout
+
+2 card vertikal
+
+Akad
+
+Unduh Mantu
+Visual
+Card oval besar
+Gunungan watermark
+Animasi
+Reveal dari bawah
+Background
+Pohon watercolor
+Gunungan transparan
+SECTION 5 — Lokasi
+Urutan
+
+Setelah acara
+
+Konten
+Alamat
+Deskripsi lokasi
+
+Tombol:
+
+Open Maps
+Layout
+
+Single card
+
+Visual
+Icon lokasi
+Divider ornament
+Interaksi
+Google Maps
+Animasi
+Fade in
+SECTION 6 — Galeri Foto
+Urutan
+
+Setelah lokasi
+
+Konten
+
+6–8 foto prewedding
+
+Layout
+
+Pinterest / Masonry Grid
+
+Contoh:
+
+[foto] [foto]
+
+[foto besar]
+
+[foto] [foto]
+Visual
+Border maroon
+Animasi
+Stagger reveal
+Zoom kecil
+Interaksi
+Klik foto → lightbox
+SECTION 7 — Love Story
+Urutan
+
+Setelah galeri
+
+Konten
+
+Terlihat timeline:
+
+2023
+
+Awal Bertemu
+
+2025
+
+Lamaran
+
+Kemungkinan berlanjut:
+
+2026
+
+Menikah
+
+Layout
+
+Timeline vertikal
+
+•
+|
+Card
+|
+•
+|
+Card
+Visual
+Garis timeline kiri
+Bulatan icon
+Animasi
+Scroll reveal
+Card slide kanan-kiri
+Background
+Putih cream
+SECTION 8 — Wedding Gift
+Urutan
+
+Setelah Love Story
+
+Konten
+
+Judul:
+
+"WEDDING GIFT"
+
+Isi:
+
+Penjelasan hadiah digital
+
+Card rekening:
+
+BCA
+BNI
+Mandiri
+
+Terlihat juga:
+
+Nama penerima
+Layout
+
+Card stack
+
+Visual
+Icon hadiah
+Ornamen Jawa
+Interaksi
+Salin Rekening
+Salin Alamat
+Animasi
+Card muncul satu per satu
+SECTION 9 — RSVP & Wishes
+Urutan
+
+Setelah Wedding Gift
+
+Konten
+
+Judul:
+
+"BEST WISHES"
+
+Field:
+
+Nama Tamu
+Konfirmasi Kehadiran
+Tulis Ucapan
+
+Button:
+
+Kirim
+Layout
+
+Form card
+
+Interaksi
+Submit RSVP
+Kirim ucapan
+Animasi
+Fade up
+SECTION 10 — Keluarga Besar
+Urutan
+
+Setelah RSVP
+
+Konten
+
+Terlihat:
+
+Keluarga Mempelai Wanita
+Keluarga Mempelai Pria
+Layout
+
+2 daftar vertikal
+
+Visual
+Card maroon
+SECTION 11 — Penutup
+Urutan
+
+Terakhir
+
+Konten
+Foto pasangan
+Ucapan terima kasih
+Layout
+
+Center aligned
+
+Visual
+Arch frame / gerbang Jawa
+Foto pasangan
+Animasi
+Slow zoom
+Fade
+Struktur yang Menurut Saya Lebih Bagus Untuk Project Anda
+
+Karena Anda sudah punya:
+
+Gunungan opening
+Joglo
+Scenery watercolor
+Pohon
+Batik Truntum
+
+Saya sarankan flow berikut:
+
+1. Pambuko (Cover)
+
+Nama pasangan
+
+2. Sabda Tresna
+
+Quote Jawa
+
+Contoh:
+
+"Saking katresnanipun Gusti, kalih manah dipun satunggalaken dados kulawarga."
+
+3. Pasrah Tinampi
+
+Profil mempelai
+
+4. Wanci Pinanggih
+
+Countdown
+
+5. Reroncening Acara
+
+Akad
+Resepsi
+Unduh Mantu
+
+6. Peta Panggih
+
+Lokasi
+
+7. Galeri Katresnan
+
+Foto prewedding
+
+8. Lampahing Tresna
+
+Love Story Timeline
+
+9. Kado Katresnan
+
+Wedding Gift
+
+10. Pangestu
+
+RSVP + Wishes
+
+11. Atur Panuwun
+
+Terima kasih
+
+Asset Tambahan yang Sebaiknya Anda Generate
+
+Selain yang sudah ada:
+
+1. Gerbang Joglo Interior
+
+Untuk transisi antar section.
+
+2. Lampu Gantung Keraton
+
+Sebagai divider.
+
+3. Pilar Kayu Ukir Jawa
+
+Frame kiri-kanan.
+
+4. Ornamen Gebyok
+
+Untuk heading section.
+
+5. Keris Siluet Emas
+
+Divider kecil.
+
+6. Janur Lengkung
+
+Frame RSVP.
+
+7. Batik Sidomukti
+
+Pattern background alternatif.
+
+8. Batik Parang Rusak Halus
+
+Background premium.
+
+9. Burung Merpati Watercolor
+
+Untuk section love story.
+
+10. Awan Watercolor Jawa
+
+Layer parallax.
+
+11. Wayang Putri & Wayang Ksatria Siluet
+
+Sebagai ornamen timeline.
+
+12. Pendopo Malam Hari
+
+Untuk section penutup.
+
+Palette Tambahan yang Cocok
+
+Video referensi ternyata tidak hanya memakai maroon.
+
+Primary
+Maroon #5A1E1E
+Secondary Gold
+#C7A86D
+Cream
+#F5F0E6
+Tambahan
+Antique Gold
+#B68B40
+Warm Brown
+#6E4B3A
+Soft Sage
+#9BA38D
+Ivory
+#FAF7F0
+Dusty Rose
+#B67A7A
+
+Dusty Rose sangat membantu agar bunga tidak terlihat terlalu merah terang dan lebih mewah.
+
+Untuk tema yang Anda jelaskan (paper cream + maroon + joglo + watercolor), kombinasi yang paling premium menurut saya adalah:
+
+Cream + Maroon + Antique Gold + Sage Green + Ivory
+
+karena terasa seperti undangan keraton Jawa modern, tidak terlalu merah dan tidak terlalu glamor.

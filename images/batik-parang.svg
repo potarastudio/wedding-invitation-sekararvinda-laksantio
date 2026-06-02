@@ -1,0 +1,30 @@
+<!--
+  Parang batik tile — diagonal "rontok" parang motif.
+  Repeats seamlessly. Stroked in gold on transparent for overlay use.
+  Custom artwork — no license restriction.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" fill="none">
+  <defs>
+    <pattern id="diag" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- One parang stripe: S-curve + small mlinjon (rhombus) -->
+      <g stroke="#d4a64a" stroke-width="2.4" fill="none" stroke-linecap="round">
+        <path d="M -40 240 C 0 200 40 160 80 120 C 120 80 160 40 200 0"/>
+        <path d="M -40 200 C 0 160 40 120 80 80" opacity="0.85"/>
+        <path d="M 0 240 C 40 200 80 160 120 120 C 160 80 200 40 240 0" opacity="0.85"/>
+      </g>
+      <!-- Mlinjon rhombi -->
+      <g fill="#d4a64a" opacity="0.9">
+        <path d="M 60 160 l 10 10 l -10 10 l -10 -10 z"/>
+        <path d="M 140 80 l 10 10 l -10 10 l -10 -10 z"/>
+        <path d="M 100 120 l 8 8 l -8 8 l -8 -8 z" opacity="0.6"/>
+      </g>
+      <!-- Small accent dots -->
+      <g fill="#f1c87a">
+        <circle cx="40" cy="180" r="2"/>
+        <circle cx="120" cy="100" r="2"/>
+        <circle cx="180" cy="20" r="2"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#diag)"/>
+</svg>

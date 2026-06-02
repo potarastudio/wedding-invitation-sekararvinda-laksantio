@@ -1,0 +1,118 @@
+<!--
+  Gunungan / Kayon — Wayang Tree-of-Life (right half).
+  Hand-drawn, palette-tinted, designed to be mirrored for the left half.
+  Pivot point is at x=0 (the seam) so it hinges open like a curtain.
+  Custom artwork — no license restriction.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 480" width="200" height="480" fill="none" preserveAspectRatio="xMinYMid meet">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4d27a"/>
+      <stop offset="50%" stop-color="#d4a64a"/>
+      <stop offset="100%" stop-color="#8a4a1e"/>
+    </linearGradient>
+    <linearGradient id="maroonGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a2a22"/>
+      <stop offset="100%" stop-color="#4a110d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f1c87a" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f1c87a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Soft halo behind -->
+  <ellipse cx="0" cy="240" rx="180" ry="240" fill="url(#glow)" opacity="0.55"/>
+
+  <!-- ===== OUTER KAYON SILHOUETTE (right half) =====
+       Tapered pointy top, curved shoulders, flared base.
+       Closes back to x=0 so two halves form one mountain. -->
+  <path d="
+    M 0 8
+    C 14 12  28 24  38 60
+    C 46 90  60 110  74 140
+    C 88 170  98 190  92 230
+    C 86 270 104 300 112 330
+    C 118 360 110 380 118 410
+    L 124 450
+    L 0 450
+    Z"
+    fill="url(#goldGrad)"
+    stroke="#3a1e08" stroke-width="2"
+    stroke-linejoin="round"/>
+
+  <!-- ===== INNER PANEL (maroon, slightly inset) ===== -->
+  <path d="
+    M 0 26
+    C 12 30  22 40  30 70
+    C 38 96  52 116  64 144
+    C 78 172  86 192  82 226
+    C 78 260  92 290 100 318
+    C 106 346 100 372 106 400
+    L 110 442
+    L 0 442
+    Z"
+    fill="url(#maroonGrad)"
+    stroke="#d4a64a" stroke-width="1.4"/>
+
+  <!-- ===== KALPATARU TREE OF LIFE (central trunk on seam) ===== -->
+  <g stroke="#d4a64a" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M 0 420 C 4 380 8 340 6 300 C 4 260 12 220 10 180 C 8 140 14 100 18 70"/>
+    <!-- Branches curling outward -->
+    <path d="M 8 380 C 24 372 36 360 42 340" opacity="0.9"/>
+    <path d="M 6 320 C 30 314 48 300 56 276" opacity="0.9"/>
+    <path d="M 10 260 C 36 254 56 238 64 212" opacity="0.85"/>
+    <path d="M 12 200 C 36 196 52 184 60 162" opacity="0.85"/>
+    <path d="M 14 140 C 32 136 46 124 52 102" opacity="0.8"/>
+  </g>
+
+  <!-- Leaves / fruit clusters along the tree -->
+  <g fill="#d4a64a">
+    <ellipse cx="42" cy="338" rx="8" ry="5"/>
+    <ellipse cx="56" cy="274" rx="9" ry="5.5"/>
+    <ellipse cx="64" cy="210" rx="9" ry="5.5"/>
+    <ellipse cx="60" cy="160" rx="7" ry="4.5"/>
+    <ellipse cx="52" cy="100" rx="6" ry="4"/>
+  </g>
+  <g fill="#f1c87a" opacity="0.9">
+    <circle cx="38" cy="370" r="2"/>
+    <circle cx="48" cy="306" r="2"/>
+    <circle cx="56" cy="240" r="2"/>
+    <circle cx="52" cy="188" r="2"/>
+    <circle cx="44" cy="128" r="2"/>
+  </g>
+
+  <!-- ===== BIRD silhouette near top (garuda-ish) ===== -->
+  <g fill="#d4a64a" stroke="#3a1e08" stroke-width="0.8">
+    <path d="M 18 90 q 8 -10 18 -6 q 4 4 0 8 q -8 6 -18 -2 Z"/>
+    <path d="M 24 90 l 4 -8" stroke="#d4a64a"/>
+  </g>
+
+  <!-- ===== GATE / GAPURA at bottom center (the door of kayon) ===== -->
+  <g>
+    <path d="M 0 410 L 18 410 L 22 388 Q 22 380 14 380 L 0 380 Z"
+          fill="#1a0a07" stroke="#d4a64a" stroke-width="1.4"/>
+    <rect x="2" y="392" width="10" height="14" fill="#0d0503"/>
+  </g>
+
+  <!-- ===== GUARDIAN RAKSASA HEAD (top peak) ===== -->
+  <g transform="translate(0 18)">
+    <path d="M 0 0 q 8 -2 14 4 q 4 6 -2 12 q -6 4 -12 0 Z"
+          fill="#d4a64a" stroke="#3a1e08" stroke-width="1"/>
+    <circle cx="6" cy="6" r="1.4" fill="#3a1e08"/>
+  </g>
+
+  <!-- ===== EDGE FILIGREE (curl ornaments along the outer edge) ===== -->
+  <g stroke="#f1c87a" stroke-width="1.2" fill="none" opacity="0.9">
+    <path d="M 32 64 q 8 -4 12 4"/>
+    <path d="M 58 120 q 8 -4 12 6"/>
+    <path d="M 76 180 q 8 -2 12 8"/>
+    <path d="M 92 250 q 8 0 12 10"/>
+    <path d="M 106 320 q 8 2 12 12"/>
+    <path d="M 116 380 q 8 4 10 12"/>
+  </g>
+
+  <!-- ===== Subtle inner highlight ===== -->
+  <path d="M 0 60 C 6 80 12 130 18 200 C 22 260 28 320 32 400"
+        stroke="#f4d27a" stroke-width="0.8" fill="none" opacity="0.55"/>
+</svg>
