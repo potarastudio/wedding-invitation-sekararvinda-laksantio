@@ -56,18 +56,18 @@ export function Cover({ onOpen, onTrigger, guestName }: Props) {
       <div className="cv-paper" />
 
       {/* Layer 1 — faded scenery (sawah / pegunungan / hutan) yang membuat pohon & joglo "menyatu" */}
-      <img className="cv-scenery" src="/cover/scenery-bg.png" alt="" aria-hidden onError={hideOnError} />
+      <img className="cv-scenery" src="/cover/scenery-bg.png" alt="" aria-hidden decoding="async" fetchPriority="high" onError={hideOnError} />
 
       {/* Layer 2 — joglo silhouette (di dalam scenery) */}
-      <img className="cv-joglo"    src="/cover/joglo-bottom.png"  alt="" aria-hidden onError={hideOnError} />
-      <img className="cv-gunungan" src="/cover/gunungan-pair.png" alt="" aria-hidden onError={hideOnError} />
+      <img className="cv-joglo"    src="/cover/joglo-bottom.png"  alt="" aria-hidden decoding="async" fetchPriority="low" onError={hideOnError} />
+      <img className="cv-gunungan" src="/cover/gunungan-pair.png" alt="" aria-hidden decoding="async" fetchPriority="low" onError={hideOnError} />
 
       {/* Layer 3 — batik truntum band di atas (geometris, full-bleed) */}
-      <img className="cv-batik-top" src="/cover/batik-top.png" alt="" aria-hidden onError={hideOnError} />
+      <img className="cv-batik-top" src="/cover/batik-top.png" alt="" aria-hidden decoding="async" fetchPriority="low" onError={hideOnError} />
 
       {/* Layer 4 — mawar kecil di 2 pojok bawah (atas dikosongkan agar batik truntum jadi hero) */}
-      <img className="cv-rose cv-rose-bl" src="/cover/rose-bl.png" alt="" aria-hidden onError={hideOnError} />
-      <img className="cv-rose cv-rose-br" src="/cover/rose-br.png" alt="" aria-hidden onError={hideOnError} />
+      <img className="cv-rose cv-rose-bl" src="/cover/rose-bl.png" alt="" aria-hidden decoding="async" fetchPriority="low" onError={hideOnError} />
+      <img className="cv-rose cv-rose-br" src="/cover/rose-br.png" alt="" aria-hidden decoding="async" fetchPriority="low" onError={hideOnError} />
 
       {/* Layer 5 — content */}
       <div className="cv-inner">
@@ -78,7 +78,7 @@ export function Cover({ onOpen, onTrigger, guestName }: Props) {
         </h1>
 
         <div className="cv-photo">
-          <img src="/cover/photo.jpg" alt="" onError={hideOnError} />
+          <img src="/cover/photo.jpg" alt="" decoding="async" fetchPriority="high" onError={hideOnError} />
           <span className="cv-photo-ring" />
         </div>
 

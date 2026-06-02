@@ -1,22 +1,15 @@
-import { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import { Cover } from './components/Cover';
-import { Pambuko } from './components/Pambuko';
-import { Mempelai } from './components/Mempelai';
-import { Countdown } from './components/Countdown';
-import { Acara } from './components/Acara';
-import { LiveStreaming } from './components/LiveStreaming';
-import { Galeri } from './components/Galeri';
-import { Story } from './components/Story';
-import { Gift } from './components/Gift';
-import { RSVP } from './components/RSVP';
-import { Tutup } from './components/Tutup';
-import { SiteBackground } from './components/SiteBackground';
-import { useLenis } from './hooks/useLenis';
+
+// All post-Cover content (including GSAP/Lenis) is code-split out of the
+// initial bundle. It starts downloading the moment the guest taps "Buka
+// Undangan" (which sets `triggered`), so by the time the Cover finishes
+// its fade-out the next screen is usually ready.
+const PostCover = lazy(() => import('./components/PostCover'));
 
 export default function App() {
-  const [triggered, setTriggered] = useState(false); // klik → Pambuko mount di belakang Cover
+  const [triggered, setTriggered] = useState(false); // klik → mulai mount Pambuko di belakang Cover
   const [opened, setOpened]       = useState(false); // Cover sudah fade out & unmount
-  useLenis(opened);
 
   useEffect(() => {
     document.body.style.overflow = opened ? '' : 'hidden';
@@ -40,19 +33,9 @@ export default function App() {
     <>
       <main>
         {triggered && (
-          <>
-            <SiteBackground />
-            <Pambuko />
-            <Mempelai />
-            <Countdown />
-            <Acara />
-            <LiveStreaming />
-            <Galeri />
-            <Story />
-            <Gift />
-            <RSVP />
-            <Tutup />
-          </>
+          <Suspense fallback={null}>
+            <PostCover opened={opened} />
+          </Suspense>
         )}
       </main>
 
