@@ -23,7 +23,7 @@ export function Mempelai() {
         ease: 'power3.out',
         scrollTrigger: { trigger: '.mp-card', start: 'top 88%' },
       });
-      gsap.from('.mp-salam, .mp-lead', {
+      gsap.from('.mp-lead', {
         opacity: 0,
         y: 24,
         duration: 0.8,
@@ -56,7 +56,6 @@ export function Mempelai() {
   return (
     <section ref={rootRef} className="mp" aria-label="Mempelai">
       <div className="mp-card">
-        <p className="mp-salam">Assalamualaikum Warahmatullahi Wabarakatuh</p>
         <p className="mp-lead">
           Dengan memohon rahmat dan ridho Allah Swt. kami bermaksud mengundang
           Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan putra-putri kami:
@@ -65,7 +64,9 @@ export function Mempelai() {
         {/* Bride */}
         <div className="mp-stack">
           <div className="mp-photo-wrap">
-            <img className="mp-photo" src={bride.photo} alt={bride.short} />
+            <div className="mp-photo-clip">
+              <img className="mp-photo" src={bride.photo} alt={bride.short} />
+            </div>
             <img className="mp-oval"  src="/cover/oval-frame.png" alt="" aria-hidden />
           </div>
           <h3 className="mp-name-script">{bride.short}</h3>
@@ -81,7 +82,9 @@ export function Mempelai() {
         {/* Groom */}
         <div className="mp-stack">
           <div className="mp-photo-wrap">
-            <img className="mp-photo" src={groom.photo} alt={groom.short} />
+            <div className="mp-photo-clip">
+              <img className="mp-photo" src={groom.photo} alt={groom.short} />
+            </div>
             <img className="mp-oval"  src="/cover/oval-frame.png" alt="" aria-hidden />
           </div>
           <h3 className="mp-name-script">{groom.short}</h3>
@@ -107,7 +110,9 @@ export function Mempelai() {
           max-width: 380px;
           background: linear-gradient(180deg, #5a1e1e 0%, #4a1414 100%);
           border-radius: 180px 180px 180px 180px;
-          padding: clamp(56px, 9dvh, 90px) clamp(24px, 6vw, 40px) clamp(56px, 9dvh, 90px);
+          /* Padding atas dinaikkan supaya teks tidak menabrak lengkungan kapsul
+             di layar yang lebih sempit / aspek-rasio tinggi. */
+          padding: clamp(96px, 14dvh, 140px) clamp(28px, 7vw, 44px) clamp(64px, 9dvh, 96px);
           text-align: center;
           color: #f3e6c8;
           box-shadow:
@@ -130,20 +135,14 @@ export function Mempelai() {
           pointer-events: none;
         }
 
-        .mp-salam {
-          font-family: 'Cormorant Garamond', 'Playfair Display', serif;
-          font-size: clamp(1.05rem, 3.6vw, 1.3rem);
-          line-height: 1.45;
-          color: #f3e6c8;
-          margin: 0 0 12px;
-          font-style: italic;
-        }
         .mp-lead {
           font-family: 'Cormorant Garamond', serif;
-          font-size: clamp(0.95rem, 2.8vw, 1.05rem);
-          line-height: 1.7;
+          font-size: clamp(0.95rem, 2.6vw, 1.05rem);
+          line-height: 1.55;
           color: #ebd7a8;
-          margin: 0 0 clamp(28px, 5dvh, 44px);
+          margin: 0 auto clamp(24px, 4dvh, 38px);
+          max-width: 30ch;
+          text-wrap: balance;
         }
 
         .mp-stack {
@@ -157,14 +156,25 @@ export function Mempelai() {
           aspect-ratio: 460 / 586;
           margin: 0 auto 18px;
         }
-        .mp-photo {
+        /* Clip container: matches the actual oval cutout of the frame PNG
+           so the photo never bleeds past the ornament. */
+        .mp-photo-clip {
           position: absolute;
-          top: 13%; left: 17%;
-          width: 66%; height: 74%;
-          object-fit: cover;
-          object-position: center 30%;
-          clip-path: ellipse(50% 50% at 50% 50%);
+          top: 14%; left: 20%;
+          width: 60%; height: 72%;
+          border-radius: 50% / 50%;
+          overflow: hidden;
           z-index: 1;
+          background: #2a0f0a;
+        }
+        .mp-photo {
+          width: 100%; height: 100%;
+          object-fit: cover;
+          /* Zoom-in lebih dekat ke wajah — tetap di dalam clip oval */
+          object-position: center 22%;
+          transform: scale(1.15);
+          transform-origin: center 30%;
+          display: block;
         }
         .mp-oval {
           position: absolute; inset: 0;

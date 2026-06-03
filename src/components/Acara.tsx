@@ -28,10 +28,23 @@ export function Acara() {
     return () => ctx.revert();
   }, []);
 
-  const { resepsi, mapsUrl } = invitation;
+  const { akad, resepsi, mapsUrl } = invitation;
 
   return (
     <section ref={rootRef} className="ac" aria-label="Acara">
+      {/* Akad Nikah — FYI only, tanpa maps */}
+      <div className="ac-card ac-card-akad">
+        <p className="ac-eyebrow">Reroncening Acara</p>
+        <h2 className="ac-title">Akad Nikah</h2>
+
+        <div className="ac-divider" aria-hidden>
+          <span /><span className="dot" /><span />
+        </div>
+
+        <p className="ac-line ac-date">{akad.date}</p>
+        <p className="ac-line ac-venue">{akad.place}</p>
+      </div>
+
       <div className="ac-card">
         <p className="ac-eyebrow">Reroncening Acara</p>
         <h2 className="ac-title">Wedding Reception</h2>
@@ -59,15 +72,29 @@ export function Acara() {
           position: relative;
           z-index: 1;
           padding: clamp(40px, 7dvh, 80px) 18px clamp(60px, 10dvh, 120px);
-          display: flex; justify-content: center;
+          display: flex; flex-direction: column; align-items: center;
+          gap: clamp(28px, 5dvh, 48px);
         }
+        /* Akad card: pakai padding yang lebih lega supaya bentuknya tetap
+           kapsul (tinggi > lebar) seperti kartu Resepsi, bukan lingkaran.
+           Pakai flex-center supaya jarak atas ≡ bawah secara visual. */
+        .ac-card-akad {
+          padding-top: clamp(70px, 9dvh, 90px);
+          padding-bottom: clamp(70px, 9dvh, 90px);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: clamp(360px, 56dvh, 460px);
+        }
+        .ac-card-akad .ac-divider { margin-bottom: 22px; }
+        .ac-card-akad .ac-venue { margin-top: 10px; }
         .ac-card {
           position: relative;
           width: 100%;
           max-width: 380px;
           background: linear-gradient(180deg, #5a1e1e 0%, #4a1414 100%);
           border-radius: 180px;
-          padding: clamp(56px, 9dvh, 90px) clamp(24px, 6vw, 40px);
+          padding: clamp(96px, 14dvh, 140px) clamp(28px, 7vw, 44px) clamp(64px, 9dvh, 96px);
           text-align: center;
           color: #f3e6c8;
           box-shadow:

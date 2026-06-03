@@ -7,16 +7,43 @@ gsap.registerPlugin(ScrollTrigger);
 type Wish = { id: string; name: string; attend: 'hadir' | 'tidak' | 'ragu'; message: string; at: number };
 
 const STORAGE_KEY = 'sv-rsvp-wishes';
+/** URL Google Apps Script Web App. Diisi via Vite env var `VITE_RSVP_ENDPOINT`. */
+const ENDPOINT = (import.meta.env.VITE_RSVP_ENDPOINT as string | undefined)?.trim() || '';
 
-function loadWishes(): Wish[] {
+function loadCache(): Wish[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     return raw ? (JSON.parse(raw) as Wish[]) : [];
   } catch { return []; }
 }
 
-function saveWishes(list: Wish[]) {
+function saveCache(list: Wish[]) {
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch { /* ignore */ }
+}
+
+async function fetchAllWishes(): Promise<Wish[] | null> {
+  if (!ENDPOINT) return null;
+  try {
+    const res = await fetch(ENDPOINT, { method: 'GET' });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!Array.isArray(data)) return null;
+    // Pastikan urut terbaru lebih dulu
+    return (data as Wish[]).sort((a, b) => b.at - a.at);
+  } catch { return null; }
+}
+
+async function postWish(w: Wish): Promise<boolean> {
+  if (!ENDPOINT) return false;
+  try {
+    // text/plain menghindari CORS preflight di Apps Script
+    await fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(w),
+    });
+    return true;
+  } catch { return false; }
 }
 
 function timeAgo(ts: number) {
@@ -29,15 +56,33 @@ function timeAgo(ts: number) {
 
 /**
  * RSVP — konfirmasi kehadiran + ucapan & doa.
- * Disimpan ke localStorage (front-end only). Bisa diintegrasikan ke backend nanti.
+ * - Submit → dikirim ke Google Apps Script (Sheets) jika `VITE_RSVP_ENDPOINT` di-set.
+ * - Load → mengambil semua ucapan dari Sheets, jatuh ke cache localStorage kalau offline.
  */
 export function RSVP() {
   const rootRef = useRef<HTMLElement>(null);
-  const [wishes, setWishes] = useState<Wish[]>(() => loadWishes());
+  const [wishes, setWishes] = useState<Wish[]>(() => loadCache());
   const [name, setName] = useState('');
   const [attend, setAttend] = useState<'hadir' | 'tidak' | 'ragu'>('hadir');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  // Initial fetch dari Sheets
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      if (!ENDPOINT) return;
+      setLoading(true);
+      const remote = await fetchAllWishes();
+      if (!cancelled && remote) {
+        setWishes(remote);
+        saveCache(remote);
+      }
+      if (!cancelled) setLoading(false);
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -50,7 +95,7 @@ export function RSVP() {
     return () => ctx.revert();
   }, []);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !message.trim()) return;
     setSubmitting(true);
@@ -61,11 +106,19 @@ export function RSVP() {
       message: message.trim(),
       at: Date.now(),
     };
-    const list = [next, ...wishes].slice(0, 200);
-    setWishes(list);
-    saveWishes(list);
+    // Optimistic update
+    const optimistic = [next, ...wishes].slice(0, 200);
+    setWishes(optimistic);
+    saveCache(optimistic);
     setName(''); setMessage(''); setAttend('hadir');
-    window.setTimeout(() => setSubmitting(false), 400);
+
+    const ok = await postWish(next);
+    if (ok) {
+      // Re-fetch supaya selaras dengan server (urutan / ucapan tamu lain)
+      const remote = await fetchAllWishes();
+      if (remote) { setWishes(remote); saveCache(remote); }
+    }
+    setSubmitting(false);
   };
 
   return (
@@ -117,7 +170,7 @@ export function RSVP() {
 
       {wishes.length > 0 && (
         <div className="rs-list" aria-label="Ucapan dari tamu">
-          <p className="rs-list-head">{wishes.length} Ucapan</p>
+          <p className="rs-list-head">{wishes.length} Ucapan{loading ? ' — memuat...' : ''}</p>
           <ul>
             {wishes.map(w => (
               <li key={w.id} className="rs-wish">

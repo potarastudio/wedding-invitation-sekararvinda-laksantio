@@ -2,13 +2,12 @@ import { Pambuko } from './Pambuko';
 import { Mempelai } from './Mempelai';
 import { Countdown } from './Countdown';
 import { Acara } from './Acara';
-import { LiveStreaming } from './LiveStreaming';
 import { Galeri } from './Galeri';
-import { Story } from './Story';
 import { Gift } from './Gift';
 import { RSVP } from './RSVP';
 import { Tutup } from './Tutup';
 import { SiteBackground } from './SiteBackground';
+import { Backsound } from './Backsound';
 import { useLenis } from '../hooks/useLenis';
 
 interface Props {
@@ -29,12 +28,11 @@ export default function PostCover({ opened }: Props) {
       <Mempelai />
       <Countdown />
       <Acara />
-      <LiveStreaming />
       <Galeri />
-      <Story />
       <Gift />
       <RSVP />
       <Tutup />
+      <Backsound enabled={opened} src="/audio/Turning Page (Instrumental).mp3" />
     </>
   );
 }

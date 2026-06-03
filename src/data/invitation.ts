@@ -13,11 +13,16 @@ export const invitation = {
     name: 'Cahyahadi Laksantio Rasyidi',
     short: 'Laksantio',
     father: 'Bapak Agus Hadi Purwoko',
-    mother: 'Ibu Laxmi Widayanti',
+    mother: 'Ibu K. Laxmi Widayanti',
     order: 'Putra kedua dari',
     address: 'Perumahan Pokoh Baru, Wedomartani, Ngemplak, Sleman',
     photo: '/cover/groom.jpg',
     instagram: ''
+  },
+  akad: {
+    title: 'Akad Nikah',
+    date: 'Sabtu, 20 Juni 2026',
+    place: 'Gedung Sidomukti Yogyakarta'
   },
   resepsi: {
     title: 'Resepsi Pernikahan',
@@ -32,10 +37,13 @@ export const invitation = {
     'https://maps.google.com/?q=Grha+Sarina+Vidi+Jl.+Magelang+8+No.75+Mulungan+Wetan+Sendangadi+Mlati+Sleman',
   couplePhoto: '/cover/couple.jpg',
   gallery: [
-    '/cover/gallery-1.jpg',
-    '/cover/gallery-2.jpg',
-    '/cover/gallery-3.jpg',
-    '/cover/gallery-4.jpg',
+    // 6 foto baru menggantikan 4 placeholder pertama
+    '/cover/WhatsApp%20Image%202026-06-02%20at%2020.55.07.jpeg',
+    '/cover/WhatsApp%20Image%202026-06-02%20at%2020.55.08.jpeg',
+    '/cover/WhatsApp%20Image%202026-06-02%20at%2020.55.08%20(1).jpeg',
+    '/cover/WhatsApp%20Image%202026-06-02%20at%2020.55.08%20(2).jpeg',
+    '/cover/WhatsApp%20Image%202026-06-02%20at%2020.58.11.jpeg',
+    '/cover/WhatsApp%20Image%202026-06-02%20at%2020.58.32.jpeg',
     '/cover/gallery-5.jpg',
     '/cover/gallery-6.jpg',
     '/cover/gallery-7.jpg',
