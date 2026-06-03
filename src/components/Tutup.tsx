@@ -19,7 +19,7 @@ export function Tutup() {
         duration: 1.1, ease: 'power3.out',
         scrollTrigger: { trigger: '.tp-photo', start: 'top 88%' },
       });
-      gsap.from('.tp-quote, .tp-source, .tp-salam, .tp-thanks, .tp-names, .tp-sign', {
+      gsap.from('.tp-thanks, .tp-salam, .tp-sign, .tp-names, .tp-fams', {
         opacity: 0, y: 24,
         duration: 0.8, stagger: 0.12, ease: 'power2.out',
         scrollTrigger: { trigger: '.tp-card', start: 'top 80%' },
@@ -28,7 +28,7 @@ export function Tutup() {
     return () => ctx.revert();
   }, []);
 
-  const { bride, groom, quote, couplePhoto } = invitation;
+  const { bride, groom, couplePhoto } = invitation;
 
   return (
     <section ref={rootRef} className="tp" aria-label="Penutup">
@@ -38,13 +38,6 @@ export function Tutup() {
 
       <div className="tp-card">
         <div className="tp-body">
-          <p className="tp-quote">{quote.text}</p>
-          <p className="tp-source">{quote.source}</p>
-
-          <div className="tp-divider" aria-hidden>
-            <span /><span className="dot" /><span />
-          </div>
-
           <p className="tp-thanks">
             Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
             Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
